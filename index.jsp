@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charest=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charest=UTF-8">
 <title>Hello World!</title>
 </head>
 <body>
