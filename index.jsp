@@ -1,12 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charest=UTF-8">
-<title>Hello World!</title>
+<meta charset="UTF-8">
+<title>JSP Bulletin Board Website</title>
 </head>
 <body>
-  <script>
-    location.href = 'login.jsp';
-  </script>
+	<script>
+		location.href = 'login.jsp';
+	</script>
 </body>
 </html>
