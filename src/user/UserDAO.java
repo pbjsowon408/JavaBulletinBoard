@@ -23,13 +23,23 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
-	
+	//protect from info hacking
 	public int login(String userID, String userPassword) {
 		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
 		try {
-			
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				if(rs.getString(1).equals(userPassword))
+					return 1;//Successfully logged in
+				else 
+					return 0; // password error
+			}
+			return -1; // no ID
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 		}
+		return -2; //database error
 	}
 }
