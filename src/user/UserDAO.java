@@ -23,6 +23,7 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+	
 	//protect from info hacking
 	public int login(String userID, String userPassword) {
 		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
@@ -31,10 +32,12 @@ public class UserDAO {
 			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
-				if(rs.getString(1).equals(userPassword))
+				if(rs.getString(1).equals(userPassword)) {
 					return 1;//Successfully logged in
-				else 
+				}
+				else {
 					return 0; // password error
+				}
 			}
 			return -1; // no ID
 		} catch (Exception e) {
@@ -43,7 +46,7 @@ public class UserDAO {
 		return -2; //database error
 	}
 	
-		public int join(User user) {
+	public int join(User user) {
 		String SQL = "INSERT INTO USER VALUES (?, ?, ?, ?, ?)";
 		try {
 			pstmt = conn.prepareStatement(SQL);
