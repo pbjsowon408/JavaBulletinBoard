@@ -16,12 +16,21 @@
 <title>JSP Bulletin Board Website</title>
 </head>
 <body>
-	<%--
 	<%
+		String userID = null;
+		if(session.getAttribute("userID") != null){
+			userID = (String) session.getAttribute("userID");
+		}
+		if(userID != null){
+			PrintWriter outter = response.getWriter();
+			outter.println("<script> alert('logged In Already'); location.href = 'main.jsp'; </script>");
+		}
+		
 		UserDAO userDAO = new UserDAO();
 		int result = userDAO.login(user.getUserID(), user.getUserPassword());
 
 		if (result == 1){
+			session.setAttribute("userID", user.getUserID());
 			PrintWriter outter = response.getWriter();
 			outter.println("<script> alert('Log-in Success'); location.href = 'main.jsp'; </script>");
 		}
@@ -39,7 +48,8 @@
 		}
 		
 	%>
-	 --%>
+	
+	 	<%--
 <%
   UserDAO userDAO = new UserDAO();
   int result = userDAO.login(user.getUserID(), user.getUserPassword());
@@ -60,6 +70,6 @@
    history.back();
   }
  </script>
-
+ --%>
 </body>
 </html>
