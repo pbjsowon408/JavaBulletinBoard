@@ -126,7 +126,7 @@ pageEncoding="UTF-8"%>
           	if(userID != null && userID.equals(bbs.getUserID())){
           %>
           		<a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">Update</a>		
-          		<a href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">Delete</a>		
+          		<a onclick="return confirm('Do you really want to delete?')" href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">Delete</a>		
           <%
           	}
           %>
