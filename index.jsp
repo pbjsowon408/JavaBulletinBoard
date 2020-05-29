@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/custom.css">
 <title>JSP Bulletin Board Website</title>
 </head>
 <body>
