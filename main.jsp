@@ -66,6 +66,15 @@
 			
 		</div>
 	</nav>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Website Introduction</h1>
+				<p>This Website is a Bootstrap-based JSP Bulletin Board System. It is developed with minimum logic and bootstrap design template. </p>
+				<p><a class="btn btn-priamry btn-pull" href="#" role="button">Further Info</a></p>
+			</div>
+		</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
